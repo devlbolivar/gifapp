@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 * {
    font-family: helvetica, arial,  sans-serif;
 }
 
 body {
   padding: 60px;
+}
+
+.main__title{
+  font-family: 'Anton', sans-serif;
 }
 
 input {
