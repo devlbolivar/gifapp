@@ -27,4 +27,16 @@ describe('Test en <AddCategory />', () => {
 
         expect(setCategories).not.toHaveBeenCalled();
     });
+
+    test('Debe de llamar el setCategories y limpiar la caja de texto', ()=>{
+        const value = 'Prueba input change'
+        const input =  wrapper.find('input');
+
+        input.simulate('change',{ target: { value }} );
+        wrapper.find('form').simulate('submit', {preventDefault(){} });
+
+        expect(setCategories).toHaveBeenCalled();
+        expect(setCategories).toHaveBeenCalledWith(expect.any(Function));
+        expect(input.prop('value').trim()).toBe('');
+    });
 });
