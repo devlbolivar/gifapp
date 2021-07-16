@@ -6,7 +6,7 @@ describe('Prueba sobre helper getGifs', () => {
 
     test('Debe de traer 10 elementos', async () => {
         const gifs = await getGifs('funny');
-        expect(gifs.length).toBe(10);
+        expect(gifs.length).toBe(16);
     });
 
     test('Debe de traer 0 elementos', async () => {

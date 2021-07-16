@@ -17,21 +17,28 @@ describe('Prueba sobre el componente <GifGrid />', ()=>{
         expect(wrapper).toMatchSnapshot();
     });
 
-    // test('Debe de mostrar items cuando se cargan imágenes con el useFetchGifs', ()=>{
+    test('Debe de mostrar items cuando se cargan imágenes con el useFetchGifs', ()=>{
 
-    //     const gifs = [{
-    //         it: 'abc',
-    //         url: 'https://prueba.com',
-    //         title: 'Prueba'
-    //     }]
-    //     useFetchGifs.mockReturnValue({
-    //         data: gifs,
-    //         loading: false
-    //     });
+        const gifs = [{
+            id: 'abc',
+            url: 'https://prueba.com',
+            title: 'Prueba'
+        },
+        {
+            id: 'abcd',
+            url: 'https://pruedba.com',
+            title: 'Pruebfa'
+        }];
+        useFetchGifs.mockReturnValue({
+            data: gifs,
+            loading: false
+        });
 
-    //     const wrapper = shallow(<GifGrid key={category} category={category} />);
+        const wrapper = shallow(<GifGrid key={category} category={category} />);
 
-    //     expect(wrapper).toMatchSnapshot();
+        expect( wrapper ).toMatchSnapshot();
+        expect( wrapper.find('p').exists() ).toBe(false);
+        expect( wrapper.find('GifGridItem').length).toBe(gifs.length);
 
-    // });
+    });
 });

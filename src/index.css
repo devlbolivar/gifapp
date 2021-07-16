@@ -5,6 +5,14 @@
 
 body {
   padding: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
+
+.main__container{
+  width: 940px;
+  background-color: beige;
 }
 
 .main__title{
@@ -24,6 +32,8 @@ input {
 }
 
 .card{
+  width: 100px;
+  height: 100px;
   align-content: center;
   border: 1px solid grey;
   border-radius: 6px;
