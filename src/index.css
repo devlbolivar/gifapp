@@ -1,22 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
-   font-family: helvetica, arial,  sans-serif;
+  font-family: helvetica, arial, sans-serif;
 }
 
 body {
-  padding: 60px;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  padding: 30px;
 }
 
-.main__container{
+.main__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 940px;
-  background-color: beige;
 }
 
-.main__title{
-  font-family: 'Anton', sans-serif;
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.main__gif {
+  height: 100px;
+  margin-top: 10px;
+  width: 100px;
+  border: 1px solid grey;
+}
+
+.main__title {
+  font-family: "Anton", sans-serif;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.first__bar {
+  display: flex;
+  width: 100%;
+}
+.push {
+  margin-left: auto;
+  border: 1px solid grey;
+}
+
+.form__search__bar {
+  display: flex;
 }
 
 input {
@@ -25,24 +60,30 @@ input {
   color: gray;
 }
 
-.card-grid{
+.div__grid {
+  border-top: 1px solid grey;
+  margin-top: 30px;
+}
+
+.card-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  background-color: grey;
 }
 
-.card{
+.card {
   width: 100px;
   height: 100px;
   align-content: center;
-  border: 1px solid grey;
   border-radius: 6px;
   margin: 0px 10px 10px 0px;
   overflow: hidden;
 }
 
-.card p{
-  padding:5px;
+.card p {
+  padding: 5px;
   text-align: center;
 }
 

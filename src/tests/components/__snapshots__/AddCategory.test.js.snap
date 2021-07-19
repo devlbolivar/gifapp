@@ -2,6 +2,7 @@
 
 exports[`Test en <AddCategory /> Debe de mostrarse correctamente <AddCategory /> 1`] = `
 <form
+  className="form__search__bar"
   onSubmit={[Function]}
 >
   <input
@@ -10,5 +11,8 @@ exports[`Test en <AddCategory /> Debe de mostrarse correctamente <AddCategory />
     type="text"
     value=""
   />
+  <button>
+    ok
+  </button>
 </form>
 `;

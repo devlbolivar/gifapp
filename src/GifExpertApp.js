@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifGrid } from './components/GifGrid';
+import React, { useState } from "react";
 
-export  const GifExpertApp = ({ defaultCategories = []}) => {
+import { GifGrid } from "./components/GifGrid";
+import { SearchBar } from "./components/SearchBar";
+import { DarkModeBtn } from "./components/DarkModeBtn";
+import { MainGif } from "./components/MainGif";
+export const GifExpertApp = ({ defaultCategories = ["funny"] }) => {
+  const [categories, setCategories] = useState(defaultCategories);
 
-    const [categories, setCategories] = useState(defaultCategories);
+  return (
+    <div className="main__container">
+      <div className="header">
+        <h2 className="main__title left">GifExpertApp</h2>
+        <MainGif />
+        <div className="right"></div>
+      </div>
+      <div className="first__bar">
+        <SearchBar setCategories={setCategories} />
+        <DarkModeBtn />
+      </div>
 
-    return (
-        <div className="main__container">
-            <div><img alt="Random Img" /></div>
-            <h2 class="main__title">GifExpertApp</h2>
-            <AddCategory setCategories={setCategories} />
-            <hr />
-            <ol>
-                {
-                    categories.map((category) => <GifGrid key={category} category={category}/>)
-                }
-            </ol>
-        </div>
-    );
-}
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
+    </div>
+  );
+};
