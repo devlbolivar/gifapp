@@ -29,7 +29,6 @@ body {
   height: 100px;
   margin-top: 10px;
   width: 100px;
-  border: 1px solid grey;
 }
 
 .main__title {
@@ -61,7 +60,7 @@ input {
 }
 
 .div__grid {
-  border-top: 1px solid grey;
+  border-top: 1px solid rgba(202, 200, 200, 0.767);
   margin-top: 30px;
 }
 
@@ -69,8 +68,7 @@ input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: grey;
+  justify-content: space-around;
 }
 
 .card {
@@ -78,7 +76,7 @@ input {
   height: 100px;
   align-content: center;
   border-radius: 6px;
-  margin: 0px 10px 10px 0px;
+  margin: 0px 5px 10px 5px;
   overflow: hidden;
 }
 
